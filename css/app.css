@@ -373,6 +373,9 @@ row 2 first column
 
 /*second column in second row*/
 
+.col2 {
+    padding-left: 40px;
+}
 .about {
     padding-top: 8%;
     text-transform: uppercase;
@@ -391,12 +394,13 @@ row 2 first column
 .list ul li {
     text-decoration: none;
 }
+.skill {}
 
 /*****Row three *****/
 
 .three {
     height: 500px;
-    background-color: snow;
+    background-color: green;
     padding-top: 4%;
 }
 .large-4 {
