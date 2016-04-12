@@ -28,11 +28,7 @@ in header*********/
         height: 600px;
         background-size: cover;
     }
-
-
-
-
-/*
+    /*
     .imagebg:before {
         content: '';
         position: absolute;
@@ -322,3 +318,10 @@ in header*********/
         text-align: center;
     }
     /*The navigation bar */
+    /************Placing the text-content-paper on the notepad in image ****************/
+
+    .content-paper {
+        -ms-transform: rotate(-8deg);
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+    }
