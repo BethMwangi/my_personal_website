@@ -1,5 +1,5 @@
     body {
-        background: grey;
+        background: black;
         overflow-x: hidden;
     }
     .clearfix:before,
@@ -16,8 +16,12 @@
     .container {
         position: relative;
         margin: 0 auto;
-        padding: 50px 0;
         clear: both;
+    }
+    .imagebg {
+        background-image: url(../img/Bethbg.jpg);
+        width: 100%;
+        height: 600px;
     }
     /*    Setting the navigation bar to be responsive */
 
@@ -54,7 +58,7 @@
         list-style: none;
         padding: 0;
         margin: o;
-        background: #FFF;
+        background: black;
         border-radius: 2px;
         -moz-border-radius: 2px;
         -webkit-border-radius: 2px;
@@ -64,16 +68,16 @@
     .mcd-menu li a {
         display: block;
         text-decoration: none;
-        padding: 12px 20px;
-        color: #777;
+        padding: 15px 25px;
+        color: snow;
         text-align: left;
-        height: 36px;
+        height: 40px;
         position: relative;
         border-bottom: 1px solid #EEE;
     }
     .mcd-menu li a i {
         float: left;
-        font-size: 20px;
+        font-size: 25px;
         margin: 0 10px 0 0;
     }
     .mcd-menu li a p {
