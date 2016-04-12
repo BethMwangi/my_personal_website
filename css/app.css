@@ -14,9 +14,14 @@
         *zoom: 1;
     }
     .container {
-        position: relative;
+        width: 100%;
+        height: auto;
+
         margin: 0 auto;
+/*
         clear: both;
+         position: relative;
+*/
     }
     /*********
 ******Background image
