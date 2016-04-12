@@ -360,7 +360,10 @@ in header*********/
 
     .three {
         width: 100%;
-        height: 400px;
+        height: 500px;
         background-color: snow;
-        padding-top: 6%;
+        padding-top: 4%;
+    }
+    .large-4 {
+        height: 500px;
     }
