@@ -336,7 +336,6 @@ in header*********/
     .second {
         width: 100%;
         height: 400px;
-        background-color: snow;
         padding-top: 8%;
         background-color: dimgrey;
     }
@@ -356,4 +355,12 @@ in header*********/
     }
     .list ul li {
         text-decoration: none;
+    }
+    /*****Row three *****/
+
+    .three {
+        width: 100%;
+        height: 400px;
+        background-color: snow;
+        padding-top: 6%;
     }
