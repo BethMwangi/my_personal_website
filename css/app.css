@@ -357,12 +357,14 @@ row 2 first column
     height: 200px;
     background-color: chocolate;
     color: snow;
+    font-family: 'Teko', sans-serif;
 }
 .aside2 {
     height: 100px;
     color: chocolate;
     padding-left: 50px;
     color: snow;
+    font-family: 'Teko', sans-serif;
 }
 .aside3 {
     height: 100px;
@@ -411,19 +413,31 @@ row 2 first column
 .about {
     padding-top: 8%;
     text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
     text-align: left;
+    font-size: 30px;
     color: #e67e22;
 }
 .text {
     color: black;
-    font-size: 15px;
+    font-size: 22px;
     text-align: left;
+    font-family: 'Teko', sans-serif;
 }
-.list ul {
+.skill {
+    font-family: 'Teko', sans-serif;
+    color: #e67e22;
+    font-size: 30px;
+}
+.text ul {
     text-decoration: none;
 }
-.list ul li {
+.text ul li {
     list-style-type: none;
+    text-decoration: none;
+}
+.text ul li a {
+    font-family: 'Teko', sans-serif;
     text-decoration: none;
 }
 
@@ -434,6 +448,7 @@ row 2 first column
     height: 500px;
     padding-top: 4%;
     background-color: darkgrey;
+    font-family: 'Teko', sans-serif;
 }
 .port {
     color: #e67e22;
@@ -486,7 +501,7 @@ row 2 first column
     color: black;
 }
 .cont {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Teko', sans-serif;
     font-size: 15px;
     color: black;
     text-align: left;
