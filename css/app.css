@@ -519,7 +519,6 @@ row 2 first column
     height: 100px;
     background-color: aqua;
 }
-.five_col {}
 
 /***Blog page css stars  here ****/
 
@@ -532,3 +531,24 @@ row 2 first column
     height: 700px;
     background-color: aliceblue;
 }
+.blogger {
+    height: 250px;
+}
+.inspire {
+    text-transform: uppercase;
+    color: snow;
+    font-family: 'Teko', sans-serif;
+}
+.blogger ul {
+    text-decoration: none;
+}
+.blogger ul li {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    padding-top: 4%;
+    float: right;
+    padding-right: 5%;
+    font-size: 50px;
+}
+.inspire ul li a {}
