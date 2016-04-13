@@ -531,7 +531,7 @@ row 2 first column
     height: 700px;
     background-color: aliceblue;
 }
-.blogger {
+.white {
     height: 250px;
 }
 .inspire {
@@ -539,10 +539,10 @@ row 2 first column
     color: snow;
     font-family: 'Teko', sans-serif;
 }
-.blogger ul {
+.white ul {
     text-decoration: none;
 }
-.blogger ul li {
+.white ul li {
     display: inline-block;
     list-style-type: none;
     text-decoration: none;
@@ -551,4 +551,13 @@ row 2 first column
     padding-right: 5%;
     font-size: 50px;
 }
-.inspire ul li a {}
+
+/*****second row with
+heading of blog post******/
+
+.poster {
+    height: 100px;
+    font-size: 350%;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
