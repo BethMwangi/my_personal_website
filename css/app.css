@@ -519,6 +519,10 @@ row 2 first column
     height: 100px;
     background-color: aqua;
 }
+.form {
+    width: 100%;
+    height: 200px;
+}
 
 /***Blog page css stars  here ****/
 
