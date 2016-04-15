@@ -356,10 +356,14 @@ row 2 first column
 */
 
 .aside1 {
+    padding-top: 5%;
     height: 200px;
-    background-color: chocolate;
+    padding-left: 6%;
     color: snow;
     font-family: 'Teko', sans-serif;
+}
+#avatar {
+    border: 4px solid grey;
 }
 .aside2 {
     height: 100px;
@@ -370,7 +374,7 @@ row 2 first column
 }
 .aside3 {
     height: 100px;
-    background-color: snow;
+    /*    background-color: snow;*/
     color: black;
 }
 .nav_social ul {
@@ -385,8 +389,13 @@ row 2 first column
 .nav_social li a {
     text-decoration: none;
 }
-.fa {
-    color: black;
+.nav_social .fa {
+    color: #e67e22;
+}
+.follow {
+    padding-left: 6%;
+    color: snow;
+    text-transform: uppercase;
 }
 
 /********  social media icons hover effects *****/
