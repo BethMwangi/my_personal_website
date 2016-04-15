@@ -1,5 +1,5 @@
 body {
-    background-image: url(../img/coffee-twitter-background.jpg);
+    background-image: url(../img/macbg.jpg);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -11,6 +11,42 @@ body {
     width: 100%;
     height: auto;
     margin: 0 auto;
+}
+#header{
+background:#333;
+width:100%;
+display:block;
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+height:50px;
+border-bottom: #252525 2px solid;
+}
+
+ a{
+text-align:left;
+text-decoration:none;
+font-weight:300;
+}
+#nav {padding-top:15px; text-align:center; margin: 0px auto; font-size:14px;  font-weight:500; }
+#nav ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+#nav li {margin-right: 0px; display: inline;}
+#nav ul li a {text-decoration:none;  margin: 0px; padding: 10px 15px 0px 15px; color:#808080;}
+#nav ul li a:hover {color: #cccccc; text-decoration:none;}
+
+#nav li.current-menu-item a {color: #ffffff; text-decoration:none;}
+#nav li.current_page_item  {color: #ffffff;  text-decoration:none;}
+
+#top{
+background:#3498db;
+width:100%;
+min-height:100%;
+max-height:100%;
+height:373px;
+padding:90px 20px 10px 20px;
+margin: 0 auto 0 auto;
+text-align:center;
+border-bottom:#2980b9 10px solid;
+color:white;
 }
 
 /*********
