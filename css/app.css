@@ -19,6 +19,10 @@ html,
     background-image: url(../img/macbg.jpg);
     width: 100%;
 }
+.row.fixed_bg.bg_img_2 {
+    background-image: url(../img/T2oGAUXFpaXXXXXXXX_!!1776056003.jpg);
+    width: 100%;
+}
 .scroll-bg {
     min-height: 60%;
 }
@@ -138,7 +142,6 @@ in header*********/
     height: 300px;
 */
     background-color: antiquewhite;
-    /*    background-image: url(../img/bg%20bg.jpg);*/
 }
 .circle {
     background-image: url(../img/SAM_4079.JPG);
@@ -251,7 +254,6 @@ in header*********/
     color: #e67e22;
     text-transform: uppercase;
     font-size: 40px;
-    background-color: snow;
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -305,16 +307,14 @@ img {
 
 /*row five*/
 
-.five {
-    width: 100%;
-    height: 300px;
-    background-color: #292929;
-    /*    background-image: url(../img/bg%20bg.jpg);*/
-}
-.five_col {
-    height: 150px;
+/*
+.bg_img_2.overlay {
+    color: antiquewhite;
+    opacity: .4;
+*/
 }
 .skillsetter {
+    padding-top: 10%;
     text-align: center;
 }
 .skillsetter h3 {
