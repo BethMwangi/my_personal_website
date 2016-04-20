@@ -250,11 +250,13 @@ img {
     width: 300px;
     height: 210px;
 }
+
 /*
 .thumbnail {
     border: 8px solid grey;
 }
 */
+
 
 /* row four containing blog post and stuff*/
 
@@ -286,9 +288,11 @@ img {
     text-align: left;
 }
 .border2 {
-    padding-bottom: 4%;
+    background-color: white;
+    padding-top: 4%;
+    margin-top: 6%;
     width: 95%;
-    border: 15px solid white;
+    border: 8px solid white;
     -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, .8);
     -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, .8);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, .8);
