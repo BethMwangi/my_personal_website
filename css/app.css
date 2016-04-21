@@ -102,13 +102,108 @@ in header*********/
     width: 100%;
     height: 500px;
     padding-top: 10%;
-    font-size: 3.5em;
+    /*    font-size: 3.5em;*/
     font-weight: 700;
-    font-family: cursive;
+    /*    font-family: cursive;*/
     text-transform: uppercase;
     color: #e67e22;
     text-align: center;
 }
+span {
+    color: whitesmoke;
+    font-size: .7em;
+}
+
+/*hr css animation */
+
+hr {
+    width: 50%;
+}
+.right {
+    left: auto;
+    right: 0px;
+}
+hr#thread1 {
+    top: 0.8em;
+    border-color: #e67e22;
+    -webkit-animation: thread2 6s infinite;
+    -moz-animation: thread2 6s infinite;
+    -o-animation: thread2 6s infinite;
+    animation: thread2 6s infinite;
+}
+hr#thread3 {
+    top: 2.8em;
+    border-color: #e67e22;
+    -webkit-animation: thread2 6s infinite;
+    -moz-animation: thread2 6s infinite;
+    -o-animation: thread2 6s infinite;
+    animation: thread2 6s infinite;
+}
+@media (min-width: 992px) {
+    hr {}
+}
+@media (min-width: 1200px) {
+    hr {}
+}
+@-webkit-keyframes thread2 {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 100%;
+    }
+    80% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@-moz-keyframes thread2 {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 100%;
+    }
+    80% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@-o-keyframes thread2 {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 100%;
+    }
+    80% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes thread2 {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 100%;
+    }
+    80% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* End ....hr css animation */
+
 @import "compass/css3";
 @include keyframes(bounce) {
     0%,
@@ -408,7 +503,6 @@ label {
 }
 input:focus,
 textarea:focus {
-    
     & + label::before,
     & + label::after {
         width: 50%;
@@ -421,7 +515,6 @@ textarea:focus {
         width: 1em;
     }
 }
-
 #n {
     color: #09805c;
 }
