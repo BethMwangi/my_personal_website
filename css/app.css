@@ -6,19 +6,15 @@ html,
 .container {
     width: 100%;
 }
-
-/*
 .overlay {
     position: absolute;
-    top: 0;
+    top: 20%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.75);
 }
-*/
-
 .fixed_bg {
     min-height: 100%;
     background-size: cover;
@@ -361,7 +357,7 @@ hr#thread3 {
 /* row four containing blog post and stuff*/
 
 .four {
-    height: 320px;
+    height: 500px;
     width: 100%;
     background-color: white;
     padding-top: 1%;
@@ -482,6 +478,10 @@ heading of blog post******/
     width: 100%;
     height: 220px;
     background-color: aliceblue;
+}
+.forms {
+    width: 100%;
+    height: auto;
 }
 .poster {
     height: 220px;
