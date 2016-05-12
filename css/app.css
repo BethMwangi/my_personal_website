@@ -6,6 +6,8 @@ html,
 .container {
     width: 100%;
 }
+
+/*
 .overlay {
     position: absolute;
     top: 0;
@@ -15,6 +17,8 @@ html,
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.75);
 }
+*/
+
 .fixed_bg {
     min-height: 100%;
     background-size: cover;
