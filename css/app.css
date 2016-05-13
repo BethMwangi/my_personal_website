@@ -113,7 +113,7 @@ in header*********/
     /*    font-family: cursive;*/
     text-transform: uppercase;
     color: #e67e22;
-    text-align: center;
+    /*    text-align: center;*/
 }
 span {
     color: whitesmoke;
