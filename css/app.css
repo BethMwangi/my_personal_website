@@ -696,11 +696,21 @@ section:hover .icon > i {
     border-radius: 3px;
     font-size: 1.25em;
     transition: all .3s cubic-bezier(.3, 0, 0, 1.3);
-    &:hover {
-        background-color: white;
-        color: #202020;
-    }
 }
+.case-study__link:hover {
+    background-color: white;
+    color: #202020;
+}
+.case-study:hover .case-study__title {
+    top: 0;
+}
+.case-study:hover  .case-study__link {
+    top: 0;}
+
+.case-study:hover  .case-study__overlay:after {
+        opacity: .75;
+    } 
+/*
 .case-study:hover {
     .case-study__title {
         top: 0;
@@ -712,6 +722,7 @@ section:hover .icon > i {
         opacity: .75;
     }
 }
+*/
 .study1 {}
 .study2 {
     background-image:
