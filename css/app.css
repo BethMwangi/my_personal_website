@@ -704,12 +704,13 @@ section:hover .icon > i {
 .case-study:hover .case-study__title {
     top: 0;
 }
-.case-study:hover  .case-study__link {
-    top: 0;}
+.case-study:hover .case-study__link {
+    top: 0;
+}
+.case-study:hover .case-study__overlay:after {
+    opacity: .75;
+}
 
-.case-study:hover  .case-study__overlay:after {
-        opacity: .75;
-    } 
 /*
 .case-study:hover {
     .case-study__title {
@@ -723,17 +724,22 @@ section:hover .icon > i {
     }
 }
 */
-.study1 {}
+
+.study1 {
+    background-image: url(../img/Front%20End%20Exercises.png);
+}
 .study2 {
-    background-image:
+    background-image: url(../img/queens.png);
 }
 .study3 {
-    background-image:
+    background-image: url(../img/Front%20End%20Exercises.png);
 }
 .study4 {
-    background-image:
+    background-image: url(../img/Front%20End%20Exercises.png);
 }
-.study5 {}
+.study5 {
+    background-image: url(../img/queens.png);
+}
 .study6 {}
 
 /*    THE FOURTH ROW WITH PORTFOLIO*/
