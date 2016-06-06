@@ -1,103 +1,72 @@
     body {
-        background-color: grey;
-    }
-    
-    .container {
-        width: 1300px;
-        height: auto;
-    }
-    .fullwidth {
-   width: 100%;
-   height: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   max-width: initial;
+    background-color: grey;
 }
-    /*The menu positioning*/
-    
-    .bg-img {
-        /*    width: 100%;*/
-        height: 800px;
-        background-image: url(../img/IMG_0533.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        text-align: center;
-        color: #fff;
-        font-family: "Montserrat", sans-serif;
-    }
-    
-    .mouse {
-        display: block;
-        margin: 0 auto;
-        width: 3.5%;
-        height: 8%;
-        border-radius: 40%;
-        border: 2px solid whitesmoke;
-        position: absolute;
-        top: 95%;
-        position: absolute;
-        left: 50%;
-        margin-left: -26px;
-    }
-    
-    .mouse span {
-        display: block;
-        margin: 6px auto;
-        width: 2px;
-        height: 2px;
-        border-radius: 4px;
-        background: whitesmoke;
-        border: 1px solid transparent;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-        -webkit-animation-name: scroll;
-        animation-name: scroll;
-    }
-    
-    @-webkit-keyframes scroll {
-        0% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-        100% {
-            opacity: 0;
-            -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-        }
-    }
-    
-    @keyframes scroll {
-        0% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-            transform: translateY(0);
-        }
-        100% {
-            opacity: 0;
-            -webkit-transform: translateY(20px);
-            -ms-transform: translateY(20px);
-            transform: translateY(20px);
-        }
-    }
-    /********
-******888The End Menu*/
-    
-   
 
+.container {
+    width: 100%;
+    height: auto;
+}
+
+
+/*The menu positioning*/
+
+.bg-img {
+    /*    width: 100%;*/
+    height: 800px;
+    background-image: url(../img/IMG_0533.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.mouse {
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+    height: 46px;
+    border-radius: 13px;
+    border: 2px solid #e8f380;
+    position: absolute;
+    bottom: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -26px;
+}
+
+.mouse span {
+    display: block;
+    margin: 6px auto;
+    width: 2px;
+    height: 2px;
+    border-radius: 4px;
+    background: #e8f380;
+    border: 1px solid transparent;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+}
+
+
+/********
+******888The End Menu*/
+
+h1 {
+    font-size: 30px;
+    line-height: 1.8;
+    text-transform: uppercase;
     /*second row About me */
-    
     .two {
         width: 100%;
         height: auto;
     }
     /*The first row with about me header*/
-    
     .about {
         background-image: url(../img/1129122.jpg);
         height: 450px;
@@ -105,7 +74,6 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    
     #box {
         background-color: rgb(224, 1, 103);
         width: 90%;
@@ -114,7 +82,6 @@
         margin: 1% auto;
         position: relative;
     }
-    
     #box:after {
         content: '';
         width: 80%;
@@ -126,7 +93,6 @@
         transform-origin: bottom left;
         z-index: -999;
     }
-    
     #box:before {
         content: '';
         width: 80%;
@@ -144,7 +110,6 @@
     background-color: black;
 }
 */
-    
     .about h1 {
         z-index: 2;
         text-transform: uppercase;
@@ -155,11 +120,9 @@
         text-align: center;
         font-size: 7em;
     }
-    
     span {
         font-size: 2em;
     }
-    
     .cont {
         background-color: aliceblue;
         height: 450px;
@@ -169,25 +132,21 @@
         -webkit-flex-wrap: wrap;
         padding: 5%;
     }
-    
     * {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
     /* Second column, second row with bouncing box*/
-    
     .item h3 {
         font-family: 'Roboto Condensed', sans-serif;
         text-align: center;
         font-size: 3em;
         color: rgb(224, 1, 103);
     }
-    
     .me {
         font-family: 'Roboto Condensed', sans-serif;
         text-align: right;
     }
-    
     .item {
         -webkit-flex: 1 35%;
         -ms-flex: 1 35%;
@@ -201,7 +160,6 @@
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         visibility: hidden;
     }
-    
     .item.slide-from-bottom,
     .item.slide-from-top {
         visibility: visible;
@@ -210,17 +168,14 @@
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
-    
     .item.slide-from-bottom {
         -webkit-animation-name: slide-from-bottom;
         animation-name: slide-from-bottom;
     }
-    
     .item.slide-from-top {
         -webkit-animation-name: slide-from-top;
         animation-name: slide-from-top;
     }
-    
     @media (max-width: 400px) {
         .item {
             -webkit-flex: 1 100%;
@@ -228,7 +183,6 @@
             margin-right: 0;
         }
     }
-    
     @-webkit-keyframes slide-from-bottom {
         from {
             opacity: 0;
@@ -239,7 +193,6 @@
             -webkit-transform: translate3d(0, 0, 0);
         }
     }
-    
     @-webkit-keyframes slide-from-top {
         from {
             opacity: 0;
@@ -250,7 +203,6 @@
             -webkit-transform: translate3d(0, 0, 0);
         }
     }
-    
     @keyframes slide-from-bottom {
         from {
             opacity: 0;
@@ -261,7 +213,6 @@
             transform: translate3d(0, 0, 0);
         }
     }
-    
     @keyframes slide-from-top {
         from {
             opacity: 0;
