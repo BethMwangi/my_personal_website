@@ -10,32 +10,43 @@
     <link rel="stylesheet" href="css/app.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+    <script src="js/responsive-nav.js"></script>
 </head>
 
 <body>
     <div class="container ">
         <div class="row one fullwidth">
             <div class="12-large columns  bg-img">
-                <div class="row fullwidth">
-                    <div class="12-large columns nav ">
-                        <ul>
-                            <li class="name   li-no-hover"> BM </li>
-                            <li class="home">Home</li>
-                            <li>About</li>
-                            <li>
-                                Portfolio
-                            </li>
-                            <li>Blog</li>
-                            <li >
-                                
-                                Contact</li>
-                        </ul>
-                    </div>
-                </div>
+
+
+                  <header>
+      <a href="#home" class="logo" data-scroll>BM</a>
+      <nav class="nav-collapse">
+        <ul>
+          <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
+          <li class="menu-item"><a href="#about" data-scroll>About</a></li>
+          <li class="menu-item"><a href="#projects" data-scroll>Projects</a></li>
+          <li class="menu-item"><a href="#blog" data-scroll>Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+                <!--                The navigation bar -->
+<!--
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+
+
+                </ul>
+                                End nav
                 <div class="mouse">
                     <span></span>
                 </div>
-
+-->
             </div>
         </div>
         <!--    This second row covers about me-->
@@ -111,6 +122,9 @@
 
 </script>
 -->
+     <script src="js/fastclick.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/fixed-responsive-nav.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
