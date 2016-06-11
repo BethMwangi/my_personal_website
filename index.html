@@ -18,31 +18,30 @@
 
 
 
-         <div class="row one fullwidth   bg-img ">
+         <div class="row one fullwidth  bg-img ">
              <div class="12-large columns
                          ">
              <div class="overlay">
                                   <header>
-      <a href="#home" class="logo" data-scroll>BM</a>
+      <a href="#home" class="logo" data-scroll><img src="img/Drawing%20(1).png" height= "8%" width="8%;"></a>
       <nav class="nav-collapse">
         <ul>
           <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
           <li class="menu-item"><a href="#about" data-scroll>About</a></li>
-          <li class="menu-item"><a href="#projects" data-scroll>Projects</a></li>
-          <li class="menu-item"><a href="#blog" data-scroll>Blog</a></li>
+          <li class="menu-item"><a href="#projects" data-scroll>Portfolio</a></li>
+          <li class="menu-item"><a href="#blog" data-scroll>Blog</a></li> <li class="menu-item"><a href="#contact" data-scroll>Contact</a></li>
         </ul>
       </nav>
     </header>
 
-
-                 </div>
+            <h3 class="intro">
+                 Passion Leads to <span>design</span> <br>
+                design leads to <span>performance</span> <br>performance leads to <span>Success!</span>
+                 </h3>
 </div>
-
-             </div>
-
-
-
-        <!--    This second row covers about me-->
+</div>
+</div>
+<!--    This second row covers about me-->
         <div class="row two fullwidth">
             <div class="large-4 columns about
                         ">
@@ -108,14 +107,15 @@
             });
         })(window);
     </script>
-    <!--
-      <script>//$(document).foundation()
+   <script>
 
 
+  $(document).on('scroll', function (e) {
+    $('.nav-bar').css('opacity', ($(document).scrollTop() / 500));
+});
 
 
-</script>
--->
+    </script>
      <script src="js/fastclick.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/fixed-responsive-nav.js"></script>
