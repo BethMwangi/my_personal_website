@@ -360,10 +360,12 @@ font-size: 1em;
 
     .two {
         width: 100%;
-        height: auto;
+        height: 600px;
+        background-color:#EEEEEE;
     }
     /*The first row with about me header*/
     
+/*
     .about {
         background-image: url(../img/1129122.jpg);
         height: 450px;
@@ -375,10 +377,12 @@ font-size: 1em;
     .shadow {
         text-shadow: 0 -3px 0 #333, 0 6px 8px rgba(0, 0, 0, .4), 0 9px 10px rgba(0, 0, 0, .15), 0 30px 10px rgba(0, 0, 0, .18), 0 15px 10px rgba(0, 0, 0, .21);
     }
+*/
     
 /*
     #box {
-        background-color: rgb(224, 1, 103);
+        background-co
+lor: rgb(224, 1, 103);
         width: 90%;
         height: 90%;
         box-shadow: 0px 50px 100px -40px darkred inset;
@@ -413,11 +417,12 @@ font-size: 1em;
 */
 
     
+/*
     .about h1 {
         z-index: 2;
         text-transform: uppercase;
         color: whitesmoke;
-        /*    color:  #808080;*/
+            color:  #808080;
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 800;
         text-align: center;
@@ -427,9 +432,11 @@ font-size: 1em;
     span {
         font-size: 2em;
     }
+*/
     
     .cont {
-        background-color: aliceblue;
+
+
         height: 450px;
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -448,7 +455,7 @@ font-size: 1em;
         font-family: 'Roboto Condensed', sans-serif;
         text-align: center;
         font-size: 3em;
-        color: rgb(224, 1, 103);
+        color:#F80853;
     }
     
     .me {
