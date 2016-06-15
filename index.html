@@ -8,6 +8,7 @@
     <title>Personal Website</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
     <script src="js/responsive-nav.js"></script>
@@ -18,104 +19,127 @@
 
 
 
-         <div class="row one fullwidth  bg-img ">
-             <div class="12-large columns
+        <div class="row one fullwidth  bg-img ">
+            <div class="large-12 columns 
                          ">
-             <div class="overlay">
-                                  <header class="nav-bar">
-      <a href="#home" class="logo" data-scroll><img src="img/Drawing%20(1).png" height= "8%" width="8%;"></a>
-      <nav class="nav-collapse">
-        <ul>
-          <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
-          <li class="menu-item"><a href="#about" data-scroll>About</a></li>
-          <li class="menu-item"><a href="#projects" data-scroll>Portfolio</a></li>
-          <li class="menu-item"><a href="#blog" data-scroll>Blog</a></li> <li class="menu-item"><a href="#contact" data-scroll>Contact</a></li>
-        </ul>
-      </nav>
-    </header>
 
-            <h3 class="intro">
+
+
+
+
+                <div class="overlay ">
+
+                    <header>
+                        <a href="#home" class="logo" tabindex="-1" data-scroll><img src="img/Drawing%20(1).png" height="8%" width="8%;"></a>
+                        <nav class="nav-collapse">
+                            <ul>
+                                <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
+                                <li class="menu-item"><a href="#about" data-scroll>About</a></li>
+                                <li class="menu-item"><a href="#projects" data-scroll>Portfolio</a></li>
+                                <li class="menu-item"><a href="#blog" data-scroll>Blog</a></li>
+                                <li class="menu-item"><a href="#contact" data-scroll>Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+
+                    <h3 class="intro">
                  Passion Leads to <span>design</span> <br>
                 design leads to <span>performance</span> <br>performance leads to <span>Success!</span>
                  </h3>
-</div>
-</div>
-</div>
-<!--    This second row covers about me-->
-        <div class="row two fullwidth">
-<!--
-            <div class="large-4 columns about
-                        ">
-                <div id="box">
-                    <h1>About<br><span>Me</span></h1></div>
+                </div>
             </div>
--->
-            <div class="large-12 columns cont">
+        </div>
+        <!--    This second row covers about me-->
+        <div class="row two fullwidth">
 
-                <div class="item">
-                    <h1> <hr> &lt;About Me&gt;<hr></h1>
-                    <h3>designer 
+
+            <div class=" 
+                        large-12 columns cont">
+
+
+
+
+                <div class="tagCloud"><span><h1>01</h1>
+                   
+                     <h2> &lt;About Me&gt;</h2></span></div>
+                <h3> I am a designer 
                         and &lt;coder&gt;
                         </h3>
-                    <p class="me">A web and graphics developer who is pasionate about making cool, unique and functional websites. I am technicaly proficient and easy to work with. When am not coding, i try out new recipes and and engage in outdoor activities</p>
-                </div>
-
+                <p class="me">A web and graphics developer who is pasionate about making cool, unique and functional websites. I am technicaly proficient and easy to work with. I beleive that design is the abity to tranform an ordinary thing into a beautiful, well-thought and functional piece. When am not coding, I try out new recipes and and engage in outdoor activities</p>
             </div>
-
         </div>
 
         <!--    Row three content with portfolio work -->
-        <div class="row three">
-            <div class="large-12 columns">
+        <div class="row three fullwidth">
+            <div class=" small-12 large-12 columns skill">
 
+                <div class="tagged">
+                    <span2>
+                        <h1>02</h1>
 
+                        <h2> &lt;My Skills&gt;</h2></span2>
+                </div>
             </div>
         </div>
+        <!--        The row with material design box/skillset -->
+        <div class="row fullwidth card-skill">
+
+
+            <div class="small-11 small-centered columns box-view">
+                <div class="card">
+                    
+                    <div class="content">
+                      
+                
+                     <i class="fa fa-code fa-3x" aria-hidden="true">
+                            </i>
+                        </div>
+                    <div class="right">
+                         <h5>
+                             
+                        Front End Development</h5>
+                        
+                        <p class="front-end">
+                        I believe in creative, beautiful and interactive design. My HTML, CSS and Jvascript skills help me create user interface designs that the user find easy and fun to use.
+                        
+                        </p>
+                    </div>
+                         
+  </div>
+                <div class="card ">
+                
+                  <div class=" content">
+                
+                <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card "></div>
+                <div class="card "></div>
+            </div>
+
+
+        </div>
+        <!--     End of   The row with material design box/skillset -->
+
     </div>
+
+
+
+
+
+
     <script src="js/classie.js"></script>
     <script src="js/clipboard.min.js"></script>
 
-    <script>
-        (function () {
-			[].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
-                var menuItems = menu.querySelectorAll('.menu__link')
-                    , setCurrent = function (ev) {
-                        ev.preventDefault();
-
-                        var item = ev.target.parentNode; // li
-
-                        // return if already current
-                        if (classie.has(item, 'menu__item--current')) {
-                            return false;
-                        }
-                        // remove current
-                        classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-                        // set current
-                        classie.add(item, 'menu__item--current');
-                    };
-
-				[].slice.call(menuItems).forEach(function (el) {
-                    el.addEventListener('click', setCurrent);
-                });
-            });
-
-			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
-                link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-                new Clipboard(link);
-                link.addEventListener('click', function () {
-                    classie.add(link, 'link-copy--animate');
-                    setTimeout(function () {
-                        classie.remove(link, 'link-copy--animate');
-                    }, 300);
-                });
-            });
-        })(window);
-    </script>
 
 
-     <script src="js/fastclick.js"></script>
+
+    <script src="js/fastclick.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/fixed-responsive-nav.js"></script>
+
+
+    </script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
