@@ -1,15 +1,18 @@
-    body {
-        background-color: grey;
-    }
-    .container {
-        width: 1300px;
-        height: auto;
-    }
-    /*color:#70002B*/
-    /* ------------------------------------------
-  RESPONSIVE NAV STYLES
---------------------------------------------- */
+    /* =============================================
+ *
+ *   FIXED RESPONSIVE NAV
+
+============================================= */
     
+    header,
+    container,
+    nav,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
     a:active,
     a:hover {
         outline: 0;
@@ -79,17 +82,14 @@
         }
     }
     /* ------------------------------------------
+  DEMO STYLES
+--------------------------------------------- */
+    /* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
     
-    .nav-bar {
-        width: 100%;
-        /*    height: 150px;*/
-    }
     header {
-        width: 100%;
-        height: 60px;
-        background-color: rgba(0, 0, 0, 0.72);
+        background: rgba(0, 0, 0, 0.72);
         position: fixed;
         z-index: 3;
         width: 100%;
@@ -97,18 +97,12 @@
         top: 0;
     }
     .logo {
-        position: relative;
-        margin: 1.5em 0 1.9em 7%;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    .logo img {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 55px;
+        padding: 0 20px;
         float: left;
-        margin: 0;
-        padding-left: 2%;
-        /*  line-height: 50px;*/
     }
     /* ------------------------------------------
   MASK
@@ -183,6 +177,7 @@
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         border-top: 1px solid white;
         text-decoration: none;
+        background: rgba(0, 0, 0, 0.53);
         padding: 0.7em 1em;
         color: #fff;
         width: 100%;
@@ -190,21 +185,22 @@
     }
     .nav-collapse a:active,
     .nav-collapse .active a {
-        color: #F80853;
-    }
-    .nav-collapse a:hover {
+        background: rgba(0, 0, 0, 0.53);
         color: #F80853;
     }
     @media screen and (min-width: 40em) {
         .nav-collapse a {
+            border-left: 1px solid white;
             padding: 1.02em 2em;
             text-align: center;
             border-top: 0;
             float: left;
             margin: 0;
+            color: #F80853;
         }
     }
-    .nav-collapse ul a {
+    .nav-collapse ul ul a {
+        /*  background: #ca3716;*/
         padding-left: 2em;
     }
     @media screen and (min-width: 40em) {
@@ -255,7 +251,17 @@
         content: "\78";
         /* Close icon */
     }
-    /*End Navbar*/
+    /* ------------------------------------------
+  RESPONSIVE NAV STYLES
+--------------------------------------------- */
+    /*------------------------------------------
+
+
+BACKGROUND IMAGE IN
+LANDING PAGE WITH OVERLAY EFFECT
+------------------------------------------
+
+*/
     
     .fullwidth {
         width: 100%;
@@ -264,14 +270,12 @@
         margin-right: auto;
         max-width: initial;
     }
-    /*The menu positioning*/
-    
     .one {
         width: 100%;
         height: 800px;
     }
     .bg-img {
-        /*        width: 100%;*/
+        width: 100%;
         height: 800px;
         background-image: url(../img/IMG_0533.jpg);
         background-attachment: fixed;
@@ -284,15 +288,15 @@
     
     .overlay {
         position: absolute;
-        /*    top: 0;*/
-        /*    left: 0;*/
-        /*    right: 0;*/
-        /*    bottom: 0;*/
+        top: 9%;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background-color: rgba(0, 0, 0, 0.67);
-        z-index: 10;
+        z-index: 2;
         text-align: center;
         width: 100%;
-        height: 800px;
+        height: 750px;
     }
     .intro {
         text-transform: uppercase;
@@ -309,14 +313,14 @@
     
     .two {
         width: 100%;
-        height: 500px;
+        height: auto;
         z-index: 2;
         position: relative;
         background-color: #323232;
     }
     .cont {
         width: 100%;
-        height: 400px;
+        height: 80%;
         text-align: center;
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -332,7 +336,7 @@
     
     .tagCloud {
         width: 100%;
-        height: 20%;
+        height: auto;
     }
     .tagCloud span {
         display: block;
@@ -423,7 +427,7 @@
     
     .three {
         width: 100%;
-        height: 100px;
+        /*        height: 100px;*/
     }
     .skill {
         width: 100%;
@@ -509,54 +513,79 @@
     
     .card-skill {
         /*width: 100%;*/
-        height: 700px;
+        height: auto;
         background-color: #D0CFCE;
     }
     .box-view {
-        height: 700px;
+/*        height: 700px;*/
         background-color: #D0CFCE;
     }
-    .card {
-        background: #fff;
-        border-radius: 2px;
-      
-            word-wrap: break-word;
-        display: inline-block;
-        height: 300px;
-        margin: 1rem;
+    section {
         position: relative;
-        width: 45%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        max-width: 500px;
+        min-height: 100px;
+        padding: 20px;
+        background: #FFF;
+        border-radius: 5px;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.15);
     }
-    .card:hover {
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    section h1 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.3em;
+        color: #555;
     }
-    /*material design cards*/
-
-
-
-
-/*
-
-ICONS  POSITIONING*/
-
-.fa {
-float: left;
- padding-left: 5%;
-
-}
-
-h5 {
-
-  
+    section p {
+        margin: 15px 0 0 0;
+        font-weight: 300;
+        line-height: 1.4em;
+        font-size: 0.95em;
+        color: #888;
+    }
+    .cards {
+        margin-top: 20vh;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .icon {
+        text-align: center;
+    }
+    .cards i {
+        font-size: 4em;
+        padding: 15px;
+        color: #CCC;
+        border: 4px solid #CCC;
+        border-radius: 50%;
+    }
+    section:hover .icon > i {
+        color: #F80853;
+        border: 5px solid #F80853;
+    }
+    @media screen and (max-width: 600px) {
+        .icon {
+            display: block;
+        }
+        section h1 {
+            margin: 30px 0 0 0;
+        }
+        .added h1 {
+            padding-top: 15px;
+        }
+    }
+    /*    THE FOURTH ROW WITH PORTFOLIO*/
     
-float: right;
-    text-align: left;
-}
-
-.front-end p{
-float: right;
-
-}
-
-
-
+    .four {
+        width: 100%;
+        height: 500px;
+        z-index: 2;
+        position: relative;
+        background-color: #323232;
+    }
+    .portfolio {
+        width: 100%;
+        height: 400px;
+        background-color: #323232;
+    }
+    /*    THE FOURTH ROW WITH PORTFOLIO*/
