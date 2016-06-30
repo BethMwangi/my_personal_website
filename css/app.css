@@ -1,260 +1,270 @@
-    /* =============================================
+/* =============================================
  *
  *   FIXED RESPONSIVE NAV
 
 ============================================= */
-    
-    header,
-    container,
-    nav,
-    ul,
-    li {
-        margin: 0;
-        padding: 0;
-        border: 0;
-    }
-    a:active,
-    a:hover {
-        outline: 0;
-    }
-    @-webkit-viewport {
-        width: device-width;
-    }
-    @-moz-viewport {
-        width: device-width;
-    }
-    @-ms-viewport {
-        width: device-width;
-    }
-    @-o-viewport {
-        width: device-width;
-    }
-    @viewport {
-        width: device-width;
-    }
-    /* ------------------------------------------
+
+header,
+container,
+nav,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+@-webkit-viewport {
+    width: device-width;
+}
+@-moz-viewport {
+    width: device-width;
+}
+@-ms-viewport {
+    width: device-width;
+}
+@-o-viewport {
+    width: device-width;
+}
+@viewport {
+    width: device-width;
+}
+
+/* ------------------------------------------
   RESPONSIVE NAV STYLES
 --------------------------------------------- */
-    
-    .nav-collapse ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        display: block;
-        list-style: none;
-    }
-    .nav-collapse li {
-        width: 100%;
-        display: block;
-    }
+
+.nav-collapse ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+}
+.nav-collapse li {
+    width: 100%;
+    display: block;
+}
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+}
+.nav-collapse.opened {
+    max-height: 9999px;
+}
+.disable-pointer-events {
+    pointer-events: none !important;
+}
+.nav-toggle {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+@media screen and (min-width: 40em) {
     .js .nav-collapse {
-        clip: rect(0 0 0 0);
-        max-height: 0;
-        position: absolute;
-        display: block;
-        overflow: hidden;
-        zoom: 1;
+        position: relative;
     }
-    .nav-collapse.opened {
-        max-height: 9999px;
-    }
-    .disable-pointer-events {
-        pointer-events: none !important;
+    .js .nav-collapse.closed {
+        max-height: none;
     }
     .nav-toggle {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
+        display: none;
     }
-    @media screen and (min-width: 40em) {
-        .js .nav-collapse {
-            position: relative;
-        }
-        .js .nav-collapse.closed {
-            max-height: none;
-        }
-        .nav-toggle {
-            display: none;
-        }
-    }
-    /* ------------------------------------------
+}
+
+/* ------------------------------------------
   DEMO STYLES
 --------------------------------------------- */
-    /* ------------------------------------------
+
+
+/* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
-    
-    header {
-        background: rgba(0, 0, 0, 0.72);
-        position: fixed;
-        z-index: 3;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-    .logo {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        text-decoration: none;
-        font-weight: bold;
-        line-height: 55px;
-        padding: 0 20px;
-        float: left;
-    }
-    /* ------------------------------------------
+
+header {
+    background: rgba(0, 0, 0, 0.72);
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.logo {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 55px;
+    padding: 0 20px;
+    float: left;
+}
+
+/* ------------------------------------------
   MASK
 --------------------------------------------- */
-    
+
+.mask {
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+    transition: opacity 300ms;
+    background: rgba(0, 0, 0, .5);
+    visibility: hidden;
+    position: fixed;
+    opacity: 0;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.android .mask {
+    -webkit-transition: none;
+    transition: none;
+}
+.js-nav-active .mask {
+    visibility: visible;
+    opacity: 1;
+}
+@media screen and (min-width: 40em) {
     .mask {
-        -webkit-transition: opacity 300ms;
-        -moz-transition: opacity 300ms;
-        transition: opacity 300ms;
-        background: rgba(0, 0, 0, .5);
-        visibility: hidden;
-        position: fixed;
-        opacity: 0;
-        z-index: 2;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        top: 0;
+        display: none !important;
+        opacity: 0 !important;
     }
-    .android .mask {
-        -webkit-transition: none;
-        transition: none;
-    }
-    .js-nav-active .mask {
-        visibility: visible;
-        opacity: 1;
-    }
-    @media screen and (min-width: 40em) {
-        .mask {
-            display: none !important;
-            opacity: 0 !important;
-        }
-    }
-    /* ------------------------------------------
+}
+
+/* ------------------------------------------
   NAVIGATION STYLES
 --------------------------------------------- */
-    
-    .fixed {
-        position: fixed;
-        width: 100%;
-        left: 0;
-        top: 0;
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.nav-collapse,
+.nav-collapse * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.nav-collapse,
+.nav-collapse ul {
+    list-style: none;
+    width: 100%;
+    float: left;
+}
+@media screen and (min-width: 40em) {
+    .nav-collapse {
+        float: right;
+        width: auto;
     }
-    .nav-collapse,
-    .nav-collapse * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    .nav-collapse,
-    .nav-collapse ul {
-        list-style: none;
-        width: 100%;
-        float: left;
-    }
-    @media screen and (min-width: 40em) {
-        .nav-collapse {
-            float: right;
-            width: auto;
-        }
-    }
+}
+.nav-collapse li {
+    float: left;
+    width: 100%;
+}
+@media screen and (min-width: 40em) {
     .nav-collapse li {
-        float: left;
-        width: 100%;
+        width: auto;
     }
-    @media screen and (min-width: 40em) {
-        .nav-collapse li {
-            width: auto;
-        }
-    }
+}
+.nav-collapse a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border-top: 1px solid white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.53);
+    padding: 0.7em 1em;
+    color: #fff;
+    width: 100%;
+    float: left;
+}
+.nav-collapse a:active,
+.nav-collapse .active a {
+    background: rgba(0, 0, 0, 0.53);
+    color: #F80853;
+}
+@media screen and (min-width: 40em) {
     .nav-collapse a {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        border-top: 1px solid white;
-        text-decoration: none;
-        background: rgba(0, 0, 0, 0.53);
-        padding: 0.7em 1em;
-        color: #fff;
-        width: 100%;
+        border-left: 1px solid white;
+        padding: 1.02em 2em;
+        text-align: center;
+        border-top: 0;
         float: left;
-    }
-    .nav-collapse a:active,
-    .nav-collapse .active a {
-        background: rgba(0, 0, 0, 0.53);
+        margin: 0;
         color: #F80853;
     }
-    @media screen and (min-width: 40em) {
-        .nav-collapse a {
-            border-left: 1px solid white;
-            padding: 1.02em 2em;
-            text-align: center;
-            border-top: 0;
-            float: left;
-            margin: 0;
-            color: #F80853;
-        }
-    }
+}
+.nav-collapse ul ul a {
+    /*  background: #ca3716;*/
+    padding-left: 2em;
+}
+@media screen and (min-width: 40em) {
     .nav-collapse ul ul a {
-        /*  background: #ca3716;*/
-        padding-left: 2em;
+        display: none;
     }
-    @media screen and (min-width: 40em) {
-        .nav-collapse ul ul a {
-            display: none;
-        }
-    }
-    /* ------------------------------------------
+}
+
+/* ------------------------------------------
   NAV TOGGLE STYLES
 --------------------------------------------- */
-    
-    @font-face {
-        font-family: "responsivenav";
-        src: url("../icons/responsivenav.eot");
-        src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
-        font-weight: normal;
-        font-style: normal;
-    }
-    .nav-toggle {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-decoration: none;
-        text-indent: -300px;
-        position: relative;
-        overflow: hidden;
-        width: 60px;
-        height: 55px;
-        float: right;
-    }
-    .nav-toggle:before {
-        color: #fff;
-        /* Edit this to change the icon color */
-        font: normal 28px/55px "responsivenav";
-        /* Edit font-size (28px) to change the icon size */
-        text-transform: none;
-        text-align: center;
-        position: absolute;
-        content: "\2261";
-        /* Hamburger icon */
-        text-indent: 0;
-        speak: none;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-    .nav-toggle.active:before {
-        font-size: 24px;
-        content: "\78";
-        /* Close icon */
-    }
-    /* ------------------------------------------
+
+@font-face {
+    font-family: "responsivenav";
+    src: url("../icons/responsivenav.eot");
+    src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+.nav-toggle {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    text-indent: -300px;
+    position: relative;
+    overflow: hidden;
+    width: 60px;
+    height: 55px;
+    float: right;
+}
+.nav-toggle:before {
+    color: #fff;
+    /* Edit this to change the icon color */
+    font: normal 28px/55px "responsivenav";
+    /* Edit font-size (28px) to change the icon size */
+    text-transform: none;
+    text-align: center;
+    position: absolute;
+    content: "\2261";
+    /* Hamburger icon */
+    text-indent: 0;
+    speak: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.nav-toggle.active:before {
+    font-size: 24px;
+    content: "\78";
+    /* Close icon */
+}
+
+/* ------------------------------------------
   RESPONSIVE NAV STYLES
 --------------------------------------------- */
-    /*------------------------------------------
+
+
+/*------------------------------------------
 
 
 BACKGROUND IMAGE IN
@@ -262,330 +272,500 @@ LANDING PAGE WITH OVERLAY EFFECT
 ------------------------------------------
 
 */
-    
-    .fullwidth {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: initial;
-    }
-    .one {
-        width: 100%;
-        height: 800px;
-    }
-    .bg-img {
-        width: 100%;
-        height: 800px;
-        background-image: url(../img/IMG_0533.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        text-align: center;
-        color: #fff;
-        font-family: "Montserrat", sans-serif;
-    }
-    /* the overlay on big cover image */
-    
-    .overlay {
-        position: absolute;
-        top: 9%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.67);
-        z-index: 2;
-        text-align: center;
-        width: 100%;
-        height: 750px;
-    }
-    .intro {
-        text-transform: uppercase;
-        padding-top: 30%;
-        font-size: 3em;
-    }
-    .intro span {
-        font-size: 1em;
-        color: #F80853;
-    }
-    /********
+
+.fullwidth {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+}
+.one {
+    width: 100%;
+    height: 800px;
+}
+.bg-img {
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/IMG_0533.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* the overlay on big cover image */
+
+.overlay {
+    position: absolute;
+    top: 9%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.67);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    height: 750px;
+}
+.intro {
+    text-transform: uppercase;
+    padding-top: 30%;
+    font-size: 3em;
+}
+.intro span {
+    font-size: 1em;
+    color: #F80853;
+}
+
+/********
 ******888The End Menu*/
-    /*second row About me */
-    
-    .two {
-        width: 100%;
-        height: auto;
-        z-index: 2;
-        position: relative;
-        background-color: #323232;
-    }
-    .cont {
-        width: 100%;
-        height: 80%;
-        text-align: center;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        -ms-flex-wrap: wrap;
-        -webkit-flex-wrap: wrap;
-        padding: 5%;
-    }
-    * {
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    /* Second column, second row with bouncing box*/
-    
-    .tagCloud {
-        width: 100%;
-        height: auto;
-    }
-    .tagCloud span {
+
+
+/*second row About me */
+
+.two {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    background-color: #323232;
+}
+.cont {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    padding: 5%;
+}
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Second column, second row with bouncing box*/
+
+.tagCloud {
+    width: 100%;
+    height: auto;
+}
+.tagCloud span {
+    display: block;
+    position: absolute;
+    opacity: .5;
+    width: 40%;
+    height: 60px;
+    left: 0;
+    right: 0;
+    top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tagCloud span:hover {
+    opacity: 1;
+    cursor: pointer!important;
+}
+.cont h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3em;
+    color: #F80853;
+}
+.tagCloud span:hover h1,
+.tagCloud span:hover h2 {
+    /*  text-shadow: 0 0 10px rgba(255, 255, 255, 1);*/
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
+    -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
+    cursor: pointer!important;
+}
+.tagCloud span h1 {
+    font-size: 3em;
+    color: whitesmoke;
+    display: inline-block;
+    font-family: "Roboto Slab";
+    letter-spacing: 1.75px;
+    position: relative;
+    margin-left: 1%;
+}
+.tagCloud span h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-family: "Roboto";
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 2%;
+    position: relative;
+}
+.tagCloud span::before {
+    content: "";
+    left: 0px;
+    top: 10%;
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    padding-right: 20%;
+    background-color: rgba(255, 255, 255, 0.78);
+}
+.tagCloud span::after {
+    content: "";
+    top: 10%;
+    left: 0px;
+    position: absolute;
+    width: 0%;
+    min-width: 20%;
+    height: 2px;
+    background-color: #F80853;
+    transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.tagCloud span:hover::after {
+    content: "";
+    width: 100%;
+    padding-right: 20px;
+    transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.me {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.5em;
+}
+
+/*Row three contents with my skills*/
+
+.three {
+    width: 100%;
+    /*        height: 100px;*/
+}
+.skill {
+    width: 100%;
+    height: 100px;
+    background-color: #D0CFCE;
+}
+.tagged {
+    width: 100%;
+    height: 20%;
+    padding-top: 3%;
+}
+.tagged span2 {
+    display: block;
+    position: absolute;
+    opacity: .5;
+    width: 40%;
+    height: 60px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skill.tagged span2:hover {
+    opacity: 1;
+    cursor: pointer!important;
+}
+.tagged span2:hover h1,
+.tagged span2:hover h2 {
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
+    -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
+    cursor: pointer!important;
+}
+.tagged span2 h1 {
+    font-size: 3em;
+    color: crimson;
+    display: inline-block;
+    font-family: "Roboto Slab";
+    letter-spacing: 1.75px;
+    position: relative;
+    margin-left: 1%;
+}
+.tagged span2 h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: crimson;
+    font-family: "Roboto";
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 2%;
+    position: relative;
+}
+.tagged span2::before {
+    content: "";
+    left: 0px;
+    top: 10%;
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    padding-right: 20%;
+    background-color: black;
+}
+.tagged span2::after {
+    content: "";
+    top: 10%;
+    left: 0px;
+    position: absolute;
+    width: 0%;
+    min-width: 20%;
+    height: 2px;
+    background-color: #F80853;
+    transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.tagged span2:hover::after {
+    content: "";
+    width: 100%;
+    padding-right: 20px;
+    transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/*The cards with skillset */
+
+.card-skill {
+    /*width: 100%;*/
+    height: auto;
+    background-color: #D0CFCE;
+}
+.box-view {
+    /*        height: 700px;*/
+    background-color: #D0CFCE;
+}
+section {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 500px;
+    min-height: 100px;
+    padding: 20px;
+    background: #FFF;
+    border-radius: 5px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}
+section h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    color: #555;
+}
+section p {
+    margin: 15px 0 0 0;
+    font-weight: 300;
+    line-height: 1.4em;
+    font-size: 0.95em;
+    color: #888;
+}
+.cards {
+    margin-top: 20vh;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.icon {
+    text-align: center;
+}
+.cards i {
+    font-size: 4em;
+    padding: 15px;
+    color: #CCC;
+    border: 4px solid #CCC;
+    border-radius: 50%;
+}
+section:hover .icon > i {
+    color: #F80853;
+    border: 5px solid #F80853;
+}
+@media screen and (max-width: 600px) {
+    .icon {
         display: block;
-        position: absolute;
-        opacity: .5;
-        width: 40%;
-        height: 60px;
-        left: 0;
-        right: 0;
-        top: 5%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .tagCloud span:hover {
-        opacity: 1;
-        cursor: pointer!important;
-    }
-    .cont h3 {
-        font-family: 'Roboto Condensed', sans-serif;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 3em;
-        color: #F80853;
-    }
-    .tagCloud span:hover h1,
-    .tagCloud span:hover h2 {
-        /*  text-shadow: 0 0 10px rgba(255, 255, 255, 1);*/
-        transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
-        -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
-        cursor: pointer!important;
-    }
-    .tagCloud span h1 {
-        font-size: 3em;
-        color: whitesmoke;
-        display: inline-block;
-        font-family: "Roboto Slab";
-        letter-spacing: 1.75px;
-        position: relative;
-        margin-left: 1%;
-    }
-    .tagCloud span h2 {
-        font-size: 2.5em;
-        text-transform: uppercase;
-        color: whitesmoke;
-        font-family: "Roboto";
-        display: inline-block;
-        font-weight: 600;
-        letter-spacing: 1px;
-        margin-left: 2%;
-        position: relative;
-    }
-    .tagCloud span::before {
-        content: "";
-        left: 0px;
-        top: 10%;
-        position: absolute;
-        width: 80%;
-        height: 2px;
-        padding-right: 20%;
-        background-color: rgba(255, 255, 255, 0.78);
-    }
-    .tagCloud span::after {
-        content: "";
-        top: 10%;
-        left: 0px;
-        position: absolute;
-        width: 0%;
-        min-width: 20%;
-        height: 2px;
-        background-color: #F80853;
-        transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-        -webkit-transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-    .tagCloud span:hover::after {
-        content: "";
-        width: 100%;
-        padding-right: 20px;
-        transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-        -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-    .me {
-        font-family: 'Roboto Condensed', sans-serif;
-        text-align: center;
-        color: whitesmoke;
-        font-size: 1.5em;
-    }
-    /*Row three contents with my skills*/
-    
-    .three {
-        width: 100%;
-        /*        height: 100px;*/
-    }
-    .skill {
-        width: 100%;
-        height: 100px;
-        background-color: #D0CFCE;
-    }
-    .tagged {
-        width: 100%;
-        height: 20%;
-        padding-top: 3%;
-    }
-    .tagged span2 {
-        display: block;
-        position: absolute;
-        opacity: .5;
-        width: 40%;
-        height: 60px;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .skill.tagged span2:hover {
-        opacity: 1;
-        cursor: pointer!important;
-    }
-    .tagged span2:hover h1,
-    .tagged span2:hover h2 {
-        transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
-        -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1)!important;
-        cursor: pointer!important;
-    }
-    .tagged span2 h1 {
-        font-size: 3em;
-        color: crimson;
-        display: inline-block;
-        font-family: "Roboto Slab";
-        letter-spacing: 1.75px;
-        position: relative;
-        margin-left: 1%;
-    }
-    .tagged span2 h2 {
-        font-size: 2.5em;
-        text-transform: uppercase;
-        color: crimson;
-        font-family: "Roboto";
-        display: inline-block;
-        font-weight: 600;
-        letter-spacing: 1px;
-        margin-left: 2%;
-        position: relative;
-    }
-    .tagged span2::before {
-        content: "";
-        left: 0px;
-        top: 10%;
-        position: absolute;
-        width: 80%;
-        height: 2px;
-        padding-right: 20%;
-        background-color: black;
-    }
-    .tagged span2::after {
-        content: "";
-        top: 10%;
-        left: 0px;
-        position: absolute;
-        width: 0%;
-        min-width: 20%;
-        height: 2px;
-        background-color: #F80853;
-        transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-        -webkit-transition: width 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-    .tagged span2:hover::after {
-        content: "";
-        width: 100%;
-        padding-right: 20px;
-        transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-        -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-    /*The cards with skillset */
-    
-    .card-skill {
-        /*width: 100%;*/
-        height: auto;
-        background-color: #D0CFCE;
-    }
-    .box-view {
-/*        height: 700px;*/
-        background-color: #D0CFCE;
-    }
-    section {
-        position: relative;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        max-width: 500px;
-        min-height: 100px;
-        padding: 20px;
-        background: #FFF;
-        border-radius: 5px;
-        border-bottom: 3px solid rgba(0, 0, 0, 0.15);
     }
     section h1 {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 1.3em;
-        color: #555;
+        margin: 30px 0 0 0;
     }
-    section p {
-        margin: 15px 0 0 0;
-        font-weight: 300;
-        line-height: 1.4em;
-        font-size: 0.95em;
-        color: #888;
+    .added h1 {
+        padding-top: 15px;
     }
-    .cards {
-        margin-top: 20vh;
-        margin-left: 20px;
-        margin-right: 20px;
+}
+
+/*    THE FOURTH ROW WITH PORTFOLIO*/
+
+.four {
+    width: 100%;
+    /*        height: 500px;*/
+    z-index: 2;
+    position: relative;
+    background-color: #323232;
+}
+.portfolio {
+    width: 100%;
+    height: 100px;
+    background-color: #323232;
+}
+.gallery-web {
+    width: 100%;
+    height: auto;
+    background-color: #323232;
+}
+.gallery-port {
+    width: 90%;
+    height: auto;
+    background-color: #323232;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.case-study {
+    position: relative;
+    display: inline-block;
+    margin-right: 2em;
+    width: 40%;
+    height: 450px;
+    margin-bottom: 2em;
+    /*        margin: 0 auto 2rem;*/
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transition: all .4s ease;
+    @media screen and (min-width: 37.5em) {
+        height: 300px;
     }
-    .icon {
-        text-align: center;
+    @media screen and (min-width:45em) {
+        display: inline-block;
+        width: 45%;
+        margin-left: 25px;
     }
-    .cards i {
-        font-size: 4em;
-        padding: 15px;
-        color: #CCC;
-        border: 4px solid #CCC;
-        border-radius: 50%;
+}
+.case-study__img {
+    width: 100%;
+    display: block;
+    margin-top: 50%;
+    transform: translateY(50%);
+    margin: 0 auto;
+}
+.case-study__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.case-study__overlay:after {
+    content: '';
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    background-color: #202020;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    left: 0;
+    transition: all .3s ease;
+}
+.case-study__title {
+    position: relative;
+    top: -200px;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    font-size: 2.25rem;
+    font-family: 'Oswald';
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    transition: all .3s cubic-bezier(.3, 0, 0, 1.3);
+}
+.case-study__link {
+    position: relative;
+    display: block;
+    width: 60%;
+    top: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    font-family: 'Oswald';
+    color: white;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 3px;
+    font-size: 1.25em;
+    transition: all .3s cubic-bezier(.3, 0, 0, 1.3);
+}
+.case-study__link:hover {
+    background-color: white;
+    color: #202020;
+}
+.case-study:hover .case-study__title {
+    top: 0;
+}
+.case-study:hover .case-study__link {
+    top: 0;
+}
+.case-study:hover .case-study__overlay:after {
+    opacity: .75;
+}
+.study1 {
+    background-image: url(../img/Front%20End%20Exercises.png);
+}
+.study2 {
+    background-image: url(../img/254_kiddies.png);
+}
+.study3 {
+    background-image: url(../img/Front%20End%20Exercises.png);
+}
+.study4 {
+    background-image: url(../img/Front%20End%20Exercises.png);
+}
+.study5 {
+    background-image: url(../img/queens.png);
+}
+.study6 {}
+
+/*    THE FOURTH ROW WITH PORTFOLIO*/
+
+
+/*--======= THE CONTACT PAGE =========-- */
+
+.contact {
+    width: 100%;
+    height: auto;
+    background: #eba102;
+}
+
+/*
+.contact >.cont {
+    padding: 100px 0;
+    padding-bottom: 80px;
+}
+*/
+
+.social_icons a {
+    display: block;
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    line-height: 1.8em !important;
+    margin: 0 10px;
+}
+@media(min-width:920px) {
+    ul.social-icons li>a {
+        display: block;
     }
-    section:hover .icon > i {
-        color: #F80853;
-        border: 5px solid #F80853;
+    .social_icons a {
+        width: 56px;
+        height: 56px;
+        line-height: 56px!important;
     }
-    @media screen and (max-width: 600px) {
-        .icon {
-            display: block;
-        }
-        section h1 {
-            margin: 30px 0 0 0;
-        }
-        .added h1 {
-            padding-top: 15px;
-        }
-    }
-    /*    THE FOURTH ROW WITH PORTFOLIO*/
-    
-    .four {
-        width: 100%;
-        height: 500px;
-        z-index: 2;
-        position: relative;
-        background-color: #323232;
-    }
-    .portfolio {
-        width: 100%;
-        height: 400px;
-        background-color: #323232;
-    }
-    /*    THE FOURTH ROW WITH PORTFOLIO*/
+}
+
+/*Typography*/
+
+.cont h3 {
+    text-align: center;
+}
