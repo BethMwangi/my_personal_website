@@ -710,26 +710,11 @@ section:hover .icon > i {
 .case-study:hover .case-study__overlay:after {
     opacity: .75;
 }
-
-/*
-.case-study:hover {
-    .case-study__title {
-        top: 0;
-    }
-    .case-study__link {
-        top: 0;
-    }
-    .case-study__overlay:after {
-        opacity: .75;
-    }
-}
-*/
-
 .study1 {
     background-image: url(../img/Front%20End%20Exercises.png);
 }
 .study2 {
-    background-image: url(../img/queens.png);
+    background-image: url(../img/254_kiddies.png);
 }
 .study3 {
     background-image: url(../img/Front%20End%20Exercises.png);
@@ -743,3 +728,44 @@ section:hover .icon > i {
 .study6 {}
 
 /*    THE FOURTH ROW WITH PORTFOLIO*/
+
+
+/*--======= THE CONTACT PAGE =========-- */
+
+.contact {
+    width: 100%;
+    height: auto;
+    background: #eba102;
+}
+
+/*
+.contact >.cont {
+    padding: 100px 0;
+    padding-bottom: 80px;
+}
+*/
+
+.social_icons a {
+    display: block;
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    line-height: 1.8em !important;
+    margin: 0 10px;
+}
+@media(min-width:920px) {
+    ul.social-icons li>a {
+        display: block;
+    }
+    .social_icons a {
+        width: 56px;
+        height: 56px;
+        line-height: 56px!important;
+    }
+}
+
+/*Typography*/
+
+.cont h3 {
+    text-align: center;
+}
