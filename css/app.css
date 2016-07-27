@@ -659,7 +659,7 @@ section:hover .icon > i {
     width: 100%;
     border-radius: 10px;
     height: 100%;
-    background-color: #202020;
+    background-color: #1c1b1b;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -684,7 +684,8 @@ section:hover .icon > i {
     position: relative;
     display: block;
     width: 60%;
-    top: 200px;
+    top: -200px;
+    /*    top: 200px;*/
     padding: 10px;
     margin: 0 auto;
     font-family: 'Oswald';
@@ -711,7 +712,7 @@ section:hover .icon > i {
     opacity: .75;
 }
 .study1 {
-    background-image: url(../img/Front%20End%20Exercises.png);
+    background-image: url(../img/BethBlog.png);
 }
 .study2 {
     background-image: url(../img/254_kiddies.png);
@@ -720,7 +721,7 @@ section:hover .icon > i {
     background-image: url(../img/Front%20End%20Exercises.png);
 }
 .study4 {
-    background-image: url(../img/Front%20End%20Exercises.png);
+    background-image: url(../img/ByhandDesigns.png);
 }
 .study5 {
     background-image: url(../img/queens.png);
@@ -732,20 +733,15 @@ section:hover .icon > i {
 
 /*--======= THE CONTACT PAGE =========-- */
 
-.contact {
-    width: 100%;
-    height: auto;
+.shym-contact {
     background: #eba102;
 }
-
-/*
-.contact >.cont {
+.shym-contact >.cont {
     padding: 100px 0;
     padding-bottom: 80px;
 }
-*/
-
-.social_icons a {
+/*
+.shym-contact .social_icons a {
     display: block;
     width: 1.8em;
     height: 1.8em;
@@ -753,19 +749,156 @@ section:hover .icon > i {
     line-height: 1.8em !important;
     margin: 0 10px;
 }
+*/
+.shym-contact .con-info {
+    margin-top: 50px;
+}
+.shym-contact .con-info i {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+.shym-contact .con-info p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+}
+.shym-contact .con-info h4 {
+    margin-bottom: 20px;
+}
+.shym-contact label,
+input[name="submit"] {
+    position: relative;
+}
+.shym-contact label > span,
+input,
+textarea,
+button {
+    box-sizing: border-box;
+}
+.shym-contact label {
+    font-weight: normal;
+    width: 100%;
+    color: #696969;
+    display: inline-block;
+    width: 100%;
+}
+.shym-contact label > span {
+    display: none;
+}
+.shym-contact input,
+textarea,
+button {
+    width: 100%;
+    border: none;
+}
+.shym-contact input[type="text"],
+input[type="email"],
+textarea {
+    margin: 0;
+    outline: none;
+    height: 38px;
+    line-height: 38px;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.shym-contact input.invalid,
+textarea.invalid {
+    border-color: #d5144d;
+}
+.shym-contact textarea {
+    height: 4em;
+    width: 100%;
+    resize: none;
+    padding: 0 10px;
+}
+.shym-contact input[type="submit"] {
+    background: #2e2e2e;
+    color: #fff;
+    font-size: 13px;
+    width: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-transform: uppercase;
+    height: 47px;
+    font-weight: bold;
+    line-height: 47px;
+    padding: 0 30px;
+}
+.shym-contact button {
+    background: #2e2e2e;
+    color: #fff;
+    font-size: 13px;
+    width: auto;
+    margin: 0 auto;
+    margin-top: -28px;
+    text-transform: uppercase;
+    height: 47px;
+    font-weight: bold;
+    line-height: 47px;
+    display: inline-block;
+}
+.shym-contact input[type="submit"]:hover,
+button:hover {
+    background: #25a7b4;
+}
+.shym-contact .form-group {
+    width: 100%;
+}
+.copyrights {
+    background: #fff;
+    height: 64px;
+    line-height: 64px;
+    overflow: hidden;
+    position: relative;
+}
+.copyrights p {
+    margin: 0px;
+    color: #000;
+    line-height: 64px;
+}
+
+/*.....Menubar...*/
+
+.menubar {
+    height: auto;
+    min-height: 40px;
+    margin-right: 30px;
+}
+.menubar a {
+    color: #8b8888;
+    font-size: 12px;
+}
+.menubar .navbar-right >li>a {
+    color: #8b8888;
+    transition: all 2s;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+}
+.menubar .navbar-right>li>a:hover,
+.menubar .navbar-right>li>a.active {
+    color: #f77c03;
+}
+.togglebutton {
+    width: 45px;
+    height: 35px;
+}
+@media(max-width:920px) {
+    .menubar {
+        background: #000;
+    }
+}
 @media(min-width:920px) {
-    ul.social-icons li>a {
+    ul.shym-social-icons li>a {
         display: block;
     }
-    .social_icons a {
+    .shym-contact .social_icons a {
         width: 56px;
         height: 56px;
         line-height: 56px!important;
     }
-}
-
-/*Typography*/
-
-.cont h3 {
-    text-align: center;
 }
